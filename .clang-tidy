@@ -1,0 +1,36 @@
+Checks: >
+  *,
+  -abseil*,
+  -android*,
+  -fuchsia*,
+  -cppcoreguidelines-*,
+  -readability-*,
+  -cert-*,
+  -hicpp-*,
+  -llvm-header-guard,
+  -google-readability-*,
+  -modernize-*,
+  -bugprone-*
+
+WarningsAsErrors: true
+HeaderFilterRegex: '.*'
+AnalyzeTemporaryDtors: true
+CheckOptions:
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.StructCase
+    value:           CamelCase
+  - key:             modernize-use-using.AllowDeclarationForAllVisibilities
+    value:           'true'
+  - key:             cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors
+    value:           'true'
+  - key:             readability-isolate-declaration.AllowMultipleInitDeclarations
+    value:           'false'
+
+Exclude: 
+  - 'third_party/*'
+  - '**/CMakeFiles/*'
+  - 'build/*'
+  - '**/*.cuh'
+
+---
