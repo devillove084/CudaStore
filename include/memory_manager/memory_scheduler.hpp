@@ -7,6 +7,7 @@
 
 #include "memory_manager/device_memory_pool.hpp"
 #include "memory_manager/memory_block.hpp"
+
 namespace cudakv {
 class MemoryScheduler {
  public:

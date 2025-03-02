@@ -23,3 +23,7 @@ inline void cudaAssert(cudaError_t code, const char* file, int line) {
     exit(EXIT_FAILURE);
   }
 }
+
+#define DISALLOW_COPY_AND_ASSIGN(TypeName) \
+  TypeName(const TypeName&);               \
+  TypeName& operator=(const TypeName&)
